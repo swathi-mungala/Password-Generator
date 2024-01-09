@@ -15,19 +15,20 @@ Welcome to password generator. Here you can generate the password on click of "G
   * Once prompts are answered then the password should be generated and displayed in an alert or written to the page
 
 ## website screenshot
-- Here is the screenshot of Finances website.
-![Password-Generator]()
+- Here is the screenshot of Password-Generator website.
+![Password-Generator](./assets/PG-Live.png)
 
 ## Live site link
-Here is the link of deployed website
-[Live site link]()
+Here is the link of Password-Generator website
+[Live site link](https://swathi-mungala.github.io/Password-Generator/)
 
 ## Github repo link
-Here is the link of Github repo
-[Github repo]()
+Here is the link of Password-Generator Github repo
+[Github repo](https://github.com/swathi-mungala/Password-Generator)
 
 ## Installation
 Clone the repository from github to your local using HTTPS or SSH or Github CLI and then run it in local.
+![Installation](./assets/PG-github.png)
 
 ## Usage
 N/A
