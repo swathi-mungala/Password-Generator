@@ -88,14 +88,41 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+var validCharaters = [];
+
 // Function to prompt user for password options
 function getPasswordOptions() {
-
+  const passwordLength = parseInt(prompt("Password length?"));
+  if (passwordLength<8 || passwordLength>126 || isNaN(passwordLength)) {
+    alert( "Please enter a valid length");
+    getPasswordOptions()
+  }
+  const lowercase = confirm("Include lowercase characters?");
+  const uppercase = confirm("Include uppercase characters?");
+  const numeric = confirm("Include numeric characters?");
+  const special = confirm("Include special characters?");
+  if(lowercase) {
+    validCharaters = validCharaters.concat(lowerCasedCharacters);
+  }
+  if(uppercase) {
+    validCharaters = validCharaters.concat(upperCasedCharacters);
+  }
+  if(numeric) {
+    validCharaters = validCharaters.concat(numericCharacters);
+  }
+  if(special) {
+    validCharaters = validCharaters.concat(specialCharacters);
+  }
+  if(!lowercase && !uppercase && !numeric && !special) {
+    alert("Please select atleast one of the options");
+    getPasswordOptions();
+  }
+  return {passwordLength,validCharaters}
 }
 
 // Function for getting a random element from an array
 function getRandom(arr) {
-
+  
 }
 
 // Function to generate password with user input
