@@ -90,6 +90,7 @@ var upperCasedCharacters = [
 
 var validCharaters = [];
 
+
 // Function to prompt user for password options
 function getPasswordOptions() {
   const passwordLength = parseInt(prompt("Password length?"));
@@ -128,7 +129,13 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
-  
+  var validResponse = getPasswordOptions()
+  console.log(validResponse);
+  var password = "";
+  for(var i=0; i<validResponse.passwordLength; i++ ) {
+    password += getRandom(validResponse.validCharaters);
+    console.log(password);
+  }
 }
 
 // Get references to the #generate element
