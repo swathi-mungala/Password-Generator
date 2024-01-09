@@ -136,6 +136,7 @@ function generatePassword() {
     password += getRandom(validResponse.validCharaters);
     console.log(password);
   }
+  return password;
 }
 
 // Get references to the #generate element
